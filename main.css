@@ -1,0 +1,26 @@
+.container{
+    /*border: 5px solid black;
+    text-align: center;*/
+}
+
+.padd{
+    margin-right: 2%;
+}
+
+.fa{
+    margin-right: 5%
+}
+.box{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    padding: 3%;
+    border: 1px solid #b7b2b2;
+}
+#db, #save{
+    margin-top: 5%;
+}
+#select{
+    margin-left: 5%;
+}
