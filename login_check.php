@@ -11,7 +11,7 @@ function loginCheck($login, $pass){
         if($records->rowCount() > 0){
             $fetch = $records->fetchAll();
 //            var_dump($fetch);
-            if($fetch[0]['password'] == $pass){
+            if($fetch[0]['password'] == md5($pass)){
                 $logged = true;
                 return true;
             }

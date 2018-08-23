@@ -1,5 +1,7 @@
 # mfsoap
 
+W pliku change.log rejestruje zmiany bazy danych bo w niej te¿ trzeba zrobiæ poprawki. 
+
 Za³o¿enia projektu: 
 - mo¿liwo¶æ sprawdzania statusu VAT podatnika
 - mo¿liwo¶æ sprawdzania statusu VAT podatnika na ¿±danie
