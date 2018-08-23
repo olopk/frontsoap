@@ -1,4 +1,9 @@
-<?php 
+<?php
+require_once(__DIR__.'/class/Database.php');
+require_once(__DIR__.'/class/User.php');
+require_once(__DIR__.'/config/config.php');
+
+
 @include('login_check.php');
 session_start();
 
