@@ -7,6 +7,4 @@ $db['user']='root';             // user name
 $db['pass']='';                 // password
 
 
-// Database object initalization
-$db = new \Database\Database($db['driver'], $db['host'], $db['name'], $db['user'], $db['pass']);
 

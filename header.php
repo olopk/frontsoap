@@ -9,9 +9,6 @@
                 <a class="nav-link" href="index.php">Strona główna <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Kontakt</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="index.php?page=settings">Ustawienia</a>
             </li>
             <?php
