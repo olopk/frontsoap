@@ -3,9 +3,8 @@ require_once(__DIR__.'/class/Database.php');
 require_once(__DIR__.'/class/User.php');
 require_once(__DIR__.'/config/config.php');
 
-
-@include('login_check.php');
 session_start();
+
 
 if($_GET['page']=='logout'){
     $_SESSION['logged'] = false;
@@ -16,7 +15,7 @@ if($_GET['page']=='logout'){
 <html>
     <head>
         <meta charset="UTF8">
-        <meta title="Sprawdz NIP">
+        <meta title="Aplikacja MFSoap">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="main.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
