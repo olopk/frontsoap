@@ -14,7 +14,7 @@ $username = '';
 $password = '';
 $col_nip = '';
 $col_contractor = '';
-$wsdl = 'http://localhost/soap/wsdl.xml';
+$wsdl = 'http://localhost:4567/wsdl.xml';
 $testowa = "cos tam";
 echo $testowa;
 credentialsLoad();

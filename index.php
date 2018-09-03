@@ -8,6 +8,30 @@ session_start();
 // Database object initialization
 $db = new \Database\Database($db['driver'], $db['host'], $db['name'], $db['user'], $db['pass']);
 
+// doesnt work
+ini_set('mssql.charset', 'CP1250');
+
+try
+{
+    $conn = new PDO("dblib:host=192.168.1.104:1433;dbname=UBOJNIA_Sp__ka_jawna;charset=UTF-8", 'sa', '');
+}
+catch(PDOException $e)
+{
+    echo "Exception: " . $e->getMessage();
+}
+
+$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+
+$query="SELECT kh_Symbol, adr_Nazwa, adr_NIP FROM kh__Kontrahent INNER JOIN adr__Ewid ON kh_id = adr_IdObiektu and adr_TypAdresu=1";
+
+// simple query
+/*
+$stmt = $conn->query( $query );
+while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
+    print_r( $row['kh_Symbol'] ."\n" );
+}
+*/
+
 // User object initialization
 $user = new \User\User($db);
 
