@@ -13,7 +13,7 @@ ini_set('mssql.charset', 'CP1250');
 
 try
 {
-    $conn = new PDO("dblib:host=192.168.1.104:1433;dbname=UBOJNIA_Sp__ka_jawna;charset=UTF-8", 'sa', '');
+    $conn = new PDO("dblib:host=192.168.5.107:1433;dbname=UBOJNIA_Sp__ka_jawna;charset=CP1250", 'sa', '');
 }
 catch(PDOException $e)
 {
@@ -22,7 +22,7 @@ catch(PDOException $e)
 
 $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 
-$query="SELECT kh_Symbol, adr_Nazwa, adr_NIP FROM kh__Kontrahent INNER JOIN adr__Ewid ON kh_id = adr_IdObiektu and adr_TypAdresu=1";
+$query="SELECT kh_Symbol, adr_Nazwa, adr_NIP FROM kh__Kontrahent INNER JOIN adr__Ewid ON kh_id = adr_IdObiektu and adr_TypAdresu=1 WHERE adr_NIP IS NOT NULL";
 
 // simple query
 /*
@@ -41,14 +41,27 @@ if ($_GET['page'] == 'logout') {
 
 ?>
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF8">
     <meta title="Aplikacja MFSoap">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="main.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+
+    <script type="text/javascript">
+        $(document).ready( function () {
+            $('.table').DataTable();
+        } );
+    </script>
 </head>
 <body>
 

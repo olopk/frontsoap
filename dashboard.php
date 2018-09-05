@@ -18,10 +18,13 @@
 
     $stmt = $conn->query( $query );
     while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
+        $lp++;
         echo '<th scope="row">'.$lp.'</th>';
-        echo '<td>'.$row['kh_Symbol'].'</td>';
-        echo '<td>'.$row['adr_Nazwa'].'</td>';
-        echo '<td>'.$row['adr_NIP'].'</td>';
+        echo '<td>'.iconv("Windows-1250","UTF-8", $row['adr_Nazwa']).'</td>';
+//        echo '<td>'.$row['adr_Nazwa'].'</td>';
+        echo '<td>'.str_replace('-', '', $row['adr_NIP']).'</td>';
+        echo '<td></td>';
+        echo '<td></td>';
         echo '</tr>';
     }
 
