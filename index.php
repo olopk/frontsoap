@@ -8,23 +8,6 @@ session_start();
 // Database app object
 $db = new \Database\Database($db['driver'], $db['host'], $db['name'], $db['user'], $db['pass']);
 
-
-// Source database object
-
-
-try
-{
-    $conn = new PDO("dblib:host=192.168.0.61:1433;dbname=UBOJNIA_Sp__ka_jawna;charset=CP1250", 'sa', '');
-}
-catch(PDOException $e)
-{
-    echo "Exception: " . $e->getMessage();
-}
-
-$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-
-$query="SELECT kh_Symbol, adr_Nazwa, adr_NIP FROM kh__Kontrahent INNER JOIN adr__Ewid ON kh_id = adr_IdObiektu and adr_TypAdresu=1";
-
 // User object initialization
 $user = new \User\User($db);
 

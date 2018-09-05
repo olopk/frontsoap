@@ -28,14 +28,11 @@ class Database
 
     public function connect()
     {
-        try
-        {
-            $dsn = $this->db_driver.':host='.$this->db_host.';dbname='.$this->db_name;
+        try {
+            $dsn = $this->db_driver . ':host=' . $this->db_host . ';dbname=' . $this->db_name;
             $this->dbh = new PDO($dsn, $this->db_user, $this->db_pass);
             $this->dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        }
-        catch(PDOException $e)
-        {
+        } catch (PDOException $e) {
             echo "Exception: " . $e->getMessage();
         }
     }
