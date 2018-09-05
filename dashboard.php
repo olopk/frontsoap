@@ -13,7 +13,8 @@
     <tbody>
     <?php
 
-    $records_checked = load();
+    // Nie chcemy zeby sprawdzal nipy za kazdym razem
+    //$records_checked = load();
     $lp = 0;
 
     $stmt = $conn->query( $query );
