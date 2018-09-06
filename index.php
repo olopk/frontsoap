@@ -12,26 +12,22 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 </head>
 <body>
-    <div class="container-fluidX">
-        <div id="logo">
-            <h1>Soap MF</h1>
-            <h2>Check contractor status app</h2>
-        </div>
-        <div id="login">
-            <form>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Login</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Podaj e-mail">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Hasło</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Hasło">
-                </div>
-                <button type="submit" class="btn btn-primary">Zaloguj</button>
-            </form>
-        </div> 
-    </div
-    cos tams
+        <?php
+
+        if(!isset($_GET['page'])){
+            include_once('login.php');
+        }
+        else{
+            switch($_GET['page']) {
+                case 'data':
+                    include_once('data.php');
+                case 'settings':
+                    include_once('settings.php');
+                case 'contact':
+                    include_once('contact.php');
+            }
+        }    
+        ?> 
 <script src="script.js"></script>    
 </body>
 </html>

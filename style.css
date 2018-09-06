@@ -2,24 +2,33 @@ body{
     font-family: 'Lato', sans-serif;
 }
 h1{
-    font-size: 8vw;
+    font-size: 5vw;
 }
 h2{
-    font-size: 4vw;
+    font-size: 2vw;
 }
-.container-fluidX{
+.loginContainer{
 
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
     position: relative;
 }
+.restContainer{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 2vw;
+}
+
 #logo{
     text-align: center;
     font-family: 'Gamja Flower', cursive;
+    margin-bottom: 2vw;
 }
 
 #login{
@@ -33,4 +42,23 @@ border-radius: 3px;
 -moz-box-shadow: -4px 4px 18px 0px rgba(0,0,0,0.75);
 box-shadow: -4px 4px 18px 0px rgba(0,0,0,0.75);
 }
-
+.menu, .content{
+    width: 70vw;
+}
+.menu{
+    margin-bottom: 1vw;
+}
+.nav{
+    background-color: #57606f;
+    border-radius: 2px;
+}
+.nav-pills .nav-link{
+    border-radius: 1px;
+    color: #dfe4ea;
+    padding-bottom: 3vh;
+    padding-top: 3vh;
+}
+.nav-pills .nav-link.active{
+    background-color: transparent;
+    color: white;
+}
