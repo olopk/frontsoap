@@ -6,7 +6,7 @@ require_once(__DIR__ . '/config/config.php');
 session_start();
 
 // Database app object
-$db = new \Database\Database($db['driver'], $db['host'], $db['name'], $db['user'], $db['pass']);
+$db = new \Database\Database($db['app']['driver'], $db['app']['host'], $db['app']['name'], $db['app']['user'], $db['app']['pass']);
 
 // User object initialization
 $user = new \User\User($db);
@@ -49,7 +49,6 @@ if(isset($_GET['page'])) {
     </script>
 </head>
 <body>
-
 
 <?php
 
