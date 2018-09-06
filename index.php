@@ -36,6 +36,8 @@ if (isset($_GET['page'])) {
     <script type="text/javascript" src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
     <script type="text/javascript">
         $(document).ready(function () {
             $('.table').DataTable(
@@ -45,6 +47,8 @@ if (isset($_GET['page'])) {
                     }
                 }
             );
+
+            $('[data-toggle="tooltip"]').tooltip();
         });
     </script>
 </head>

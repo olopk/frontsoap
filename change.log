@@ -2,3 +2,7 @@ SQL changes:
 ALTER TABLE `users` CHANGE `login` `login` VARCHAR(127) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL, CHANGE `password` `password` VARCHAR(127) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL;
 
 Added unique index for nip in kontrahent_status table
+
+RENAME TABLE `aplikacja`.`db_credentials` TO `aplikacja`.`settings`;
+ALTER TABLE `settings` ADD sync_every` INT(4) NOT NULL;
+
