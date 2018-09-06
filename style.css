@@ -8,6 +8,7 @@ h2{
     font-size: 4vw;
 }
 .container-fluidX{
+    
     min-height: 100vh;
     display: flex;
     flex-direction: column;
