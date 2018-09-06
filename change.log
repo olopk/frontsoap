@@ -1,3 +1,4 @@
 SQL changes:
 ALTER TABLE `users` CHANGE `login` `login` VARCHAR(127) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL, CHANGE `password` `password` VARCHAR(127) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL;
 
+Added unique index for nip in kontrahent_status table

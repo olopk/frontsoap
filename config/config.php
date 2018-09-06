@@ -13,5 +13,4 @@ $db['src']['name']='UBOJNIA_Sp__ka_jawna'; // source db database name
 $db['src']['user']='sa';                   // source db user name
 $db['src']['pass']='';                     // source db password
 
-$wsdl = 'http://localhost:4567/wsdl.xml';  // wsdl source
 $wsdl = './wsdl.xml';  // wsdl source

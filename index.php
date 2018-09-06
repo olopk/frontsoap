@@ -11,7 +11,7 @@ $db = new \Database\Database($db['app']['driver'], $db['app']['host'], $db['app'
 // User object initialization
 $user = new \User\User($db);
 
-if(isset($_GET['page'])) {
+if (isset($_GET['page'])) {
     if ($_GET['page'] == 'logout') {
         $_SESSION['logged'] = false;
     }
@@ -37,7 +37,7 @@ if(isset($_GET['page'])) {
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 
     <script type="text/javascript">
-        $(document).ready( function () {
+        $(document).ready(function () {
             $('.table').DataTable(
                 {
                     language: {
@@ -45,15 +45,17 @@ if(isset($_GET['page'])) {
                     }
                 }
             );
-        } );
+        });
     </script>
 </head>
 <body>
 
 <?php
 
-if ($_POST['submit'] == 'send') {
-    $_SESSION['logged'] = $user->login($_POST['login'], $_POST['pass']);
+if (!empty($_POST['submit'])) {
+    if ($_POST['submit'] == 'send') {
+        $_SESSION['logged'] = $user->login($_POST['login'], $_POST['pass']);
+    }
 }
 if ($_SESSION['logged'] == false) {
     @include('header.php');

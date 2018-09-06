@@ -25,7 +25,7 @@ class Engine
 
     private function prepare()
     {
-        $query = "SELECT TOP 100 kh_id, kh_Symbol, adr_Nazwa, adr_NIP FROM kh__Kontrahent INNER JOIN adr__Ewid ON kh_id = adr_IdObiektu and adr_TypAdresu=1";
+        $query = "SELECT TOP 200 kh_id, kh_Symbol, adr_Nazwa, adr_NIP FROM kh__Kontrahent INNER JOIN adr__Ewid ON kh_id = adr_IdObiektu and adr_TypAdresu=1";
         $this->db_src->query($query);
         $rs = $this->db_src->resultset();
         return $rs;
@@ -43,28 +43,34 @@ class Engine
             $response = $client->__soapCall("SprawdzNIP", array($parsed_NIP));
             $array = json_decode(json_encode($response), True);
 
-            // too much task in one function. other maybe ?!
+            // TODO: too much task in one function. other maybe ?!
             $query = "SELECT * FROM kontrahent_status WHERE nip='" . $parsed_NIP . "';";
-            $check = $this->db_dst->query($query);
+            $this->db_dst->query($query);
             $this->db_dst->execute();
 
+            // TODO: Is it really chechking 'komunikat' change
 
-            if (!$this->db_dst->rowCount() > 0)
-            {
-                $insert = "INSERT INTO kontrahent_status (nazwa, nip, kod, komunikat) VALUES ('" . iconv("Windows-1250","UTF-8", $record['adr_Nazwa']) . "', '" . $parsed_NIP . "', '" . $array['Kod'] . "', '" . $array['Komunikat'] . "')";
-                $this->db_dst->query($insert);
-                $this->db_dst->execute();
+            if (!$this->db_dst->rowCount() > 0) {
+
+                $adr_nazwa = iconv("Windows-1250","UTF-8", $record['adr_Nazwa']);
+
+                $this->db_dst->query('INSERT INTO kontrahent_status (nazwa, nip, kod, komunikat) VALUES (:nazwa, :nip, :kod, :komunikat)');
+                $this->db_dst->execute(array(':nazwa' => $adr_nazwa, ':nip' => $parsed_NIP, ':kod' => $array['Kod'], ':komunikat' => $array['Komunikat']));
+
             }
             else
             {
-                $update = "UPDATE kontrahent_status SET nazwa ='" . $record['adr_Nazwa'] . "', kod = '" . $array['Kod'] . "', komunikat = '" . $array['Komunikat'] . "' WHERE nip='" . $parsed_NIP . "';";
+                $adr_nazwa = iconv("Windows-1250","UTF-8", $record['adr_Nazwa']);
+
+                $update = "UPDATE kontrahent_status SET nazwa=:nazwa, kod=:kod, komunikat=:komunikat WHERE nip=:nip";
                 $this->db_dst->query($update);
-                $this->db_dst->execute();
+                $this->db_dst->execute(array(':nazwa' => $adr_nazwa, ':kod' => $array['Kod'], ':komunikat' => $array['Komunikat'], ':nip' => $parsed_NIP));
             }
         }
 
-
     }
+
+    //TODO: Check update time setting (example: every 15min)
 
 
 }

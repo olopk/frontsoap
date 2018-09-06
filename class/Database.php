@@ -37,9 +37,9 @@ class Database
         }
     }
 
-    public function execute()
+    public function execute($array = null)
     {
-        return $this->stmt->execute();
+        return $this->stmt->execute($array);
     }
 
     public function resultset()
@@ -62,6 +62,11 @@ class Database
     public function query($query)
     {
         $this->stmt = $this->dbh->prepare($query);
+    }
+
+    public function quote($string)
+    {
+        return $this->dbh->quote($string);
     }
 
 
