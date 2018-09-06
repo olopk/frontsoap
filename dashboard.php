@@ -1,11 +1,12 @@
-<!--<?php @include_once('engine.php');?>-->
+
+Tabela
 
 <table class="table table-striped">
     <thead>
     <tr>
-        <th scope="col">lp</th>
-        <th scope="col">Firma</th>
-        <th scope="col">Nip</th>
+        <th scope="col">Lp</th>
+        <th scope="col">Nazwa firmy</th>
+        <th scope="col">NIP</th>
         <th scope="col">Status</th>
         <th scope="col">Ostatnia Aktualizacja</th>
     </tr>
@@ -13,24 +14,14 @@
     <tbody>
     <?php
 
-    // Nie chcemy zeby sprawdzal nipy za kazdym razem
-    //$records_checked = load();
     $lp = 0;
 
-    $stmt = $conn->query( $query );
-    while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
-        $lp++;
-        echo '<th scope="row">'.$lp.'</th>';
-        echo '<td>'.iconv("Windows-1250","UTF-8", $row['adr_Nazwa']).'</td>';
-//        echo '<td>'.$row['adr_Nazwa'].'</td>';
-        echo '<td>'.str_replace('-', '', $row['adr_NIP']).'</td>';
-        echo '<td></td>';
-        echo '<td></td>';
-        echo '</tr>';
-    }
+    $sql = "SELECT * FROM kontrahent_status";
+    $db->query($sql);
 
-    /*
-    foreach($records_checked as $row){
+    $records = $db->resultset();
+
+    foreach($records as $row){
         $lp++;
         echo '<th scope="row">'.$lp.'</th>';
         echo '<td>'.$row['nazwa'].'</td>';
@@ -39,7 +30,7 @@
         echo '<td>'.$row['data_utworzenia'].'</td>';
         echo '</tr>';
     }
-    */
+
     ?>
 
     </tbody>

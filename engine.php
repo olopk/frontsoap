@@ -5,7 +5,6 @@ require_once(__DIR__ . '/class/Engine.php');
 
 header('Content-Type: text/html; charset=utf-8');
 
-
 try
 {
 //    $conn = new PDO("dblib:host=192.168.1.104:1433;dbname=UBOJNIA_Sp__ka_jawna;charset=CP1250", 'sa', '');
