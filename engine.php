@@ -6,6 +6,9 @@ require_once(__DIR__ . '/class/Engine.php');
 header('Content-Type: text/html; charset=utf-8');
 ini_set('max_execution_time', 0);
 
+ini_set('soap.wsdl_cache_enabled',0);
+ini_set('soap.wsdl_cache_ttl',0);
+
 try {
     $dbs = new \Database\Database($db['src']['driver'], $db['src']['host'], $db['src']['name'], $db['src']['user'], $db['src']['pass']);        // Database source
     $db = new \Database\Database($db['app']['driver'], $db['app']['host'], $db['app']['name'], $db['app']['user'], $db['app']['pass']);

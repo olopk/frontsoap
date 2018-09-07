@@ -11,7 +11,7 @@ $row = $db->single();
 ?>
 <form action="" method="post" id="db">
 
-    <div class="card">
+    <div class="card text-left">
         <div class="card-header">
             Ustawienia ogólne
         </div>
