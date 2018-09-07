@@ -8,7 +8,7 @@ $db['app']['pass']='root';                 // application db password
 
 
 $db['src']['driver']='dblib';              // source db driver name
-$db['src']['host']='192.168.1.104:1433';   // source db hostname
+$db['src']['host']='192.168.5.107:1433';   // source db hostname
 $db['src']['name']='UBOJNIA_Sp__ka_jawna'; // source db database name
 $db['src']['user']='sa';                   // source db user name
 $db['src']['pass']='';                     // source db password

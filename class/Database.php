@@ -42,9 +42,9 @@ class Database
         return $this->stmt->execute($array);
     }
 
-    public function resultset()
+    public function resultset($array = null)
     {
-        $this->execute();
+        $this->execute($array);
         return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
@@ -53,9 +53,9 @@ class Database
         return $this->stmt->rowCount();
     }
 
-    public function single()
+    public function single($array = null)
     {
-        $this->execute();
+        $this->execute($array);
         return $this->stmt->fetch(PDO::FETCH_ASSOC);
     }
 
