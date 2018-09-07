@@ -14,14 +14,12 @@ h2{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
 .restContainer{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
     margin-top: 2vw;
 }
 
@@ -42,11 +40,17 @@ border-radius: 3px;
 -moz-box-shadow: -4px 4px 18px 0px rgba(0,0,0,0.75);
 box-shadow: -4px 4px 18px 0px rgba(0,0,0,0.75);
 }
+
+/*  
+
+
+NAVBAR  
+
+
+*/
+
 .menu, .content{
     width: 70vw;
-}
-.menu{
-    margin-bottom: 1vw;
 }
 .nav{
     background-color: #57606f;
@@ -61,4 +65,66 @@ box-shadow: -4px 4px 18px 0px rgba(0,0,0,0.75);
 .nav-pills .nav-link.active{
     background-color: transparent;
     color: white;
+}
+/* --------------------- */
+.content{
+    border:1px solid gray;
+}
+
+
+
+/* for small screens */
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+.menu, .content{
+width: 100vw;
+border: none;
+}
+
+table, thead, tbody, th, td, tr { 
+display: block; 
+}
+
+
+/* Hide table headers (but not display: none;, for accessibility) */
+thead tr, tr th { 
+position: absolute;
+top: -9999px;
+left: -9999px;
+}
+
+tr { border: 1px solid #ccc; }
+
+
+
+table tr td { 
+/* Behave  like a "row" */
+border: none;
+border-bottom: 1px solid #eee; 
+position: relative;
+padding: 0vw 0vw 0vw 23vw !important; 
+}
+
+td:before { 
+border-right: 1px solid #ccc;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 2vw;
+right: 2vw;
+width: 18vw; 
+padding-right: 10px; 
+white-space: nowrap;
+}
+
+/*
+Label the data
+*/
+td:nth-of-type(1):before { content: "Nazwa"; }
+td:nth-of-type(2):before { content: "NIP"; }
+td:nth-of-type(3):before { content: "Status"; }
+td:nth-of-type(4):before { content: "Zmiana"; }
 }
