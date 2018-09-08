@@ -59,12 +59,22 @@ box-shadow: -4px 4px 18px 0px rgba(0,0,0,0.75);
 .col-sm-12{
     padding: 0px;
 }
+.col-sm-6{
+    padding: 1vw 0vw 1vw 0vw;
+}
 
-input.form-control, select.form-control{
-    padding-left: 2vw;
-    padding-right: 2vw;
-    margin-left: 2vw;
-    margin-right: 2vw;
+.dataTables_length label, .dataTables_filter label, .pagination, .dataTables_info{
+    padding: 0vw 1vw 0vw 1vw;
+}
+.pagination>.active>a, .pagination>.active>a:selected{
+    background-color: #57606f;
+}
+.pagination>.active>a:hover{
+    background-color: #797f88;
+}
+
+.col-sm-7, .col-sm-5, .col-sm-6{
+    padding: 1vw 0vw 1vw 0vw;
 }
 
 /**************************/
@@ -72,16 +82,34 @@ input.form-control, select.form-control{
 .nav{
     background-color: #57606f;
     border-radius: 2px;
-}
-.nav-pills .nav-link{
-    border-radius: 1px;
-    color: #dfe4ea;
     padding-bottom: 3vh;
     padding-top: 3vh;
+    margin-left: auto;
+    margin-right: auto;
 }
-.nav-pills .nav-link.active{
+.nav-pills{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.nav-pills > li.active > a{
     background-color: transparent;
     color: white;
+}
+.nav-pills > li.active > a:hover{
+    background-color: transparent;
+    color: white;
+}
+.nav-pills > li > a{
+    color: gray;
+}
+.nav-pills > li > a:hover{
+    background-color: transparent;
+    color: white;
+}
+.nav > li{
+    float:none;
+    display:inline-block;
 }
 /**************************/
 
@@ -90,6 +118,10 @@ input.form-control, select.form-control{
 @media 
 only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
+
+.restContainer{
+    margin: 0px;
+}
 
 .menu, .content{
 width: 100vw;
@@ -139,4 +171,9 @@ td:nth-of-type(1):before { content: "Nazwa"; }
 td:nth-of-type(2):before { content: "NIP"; }
 td:nth-of-type(3):before { content: "Status"; }
 td:nth-of-type(4):before { content: "Zmiana"; }
+
+
+.col-sm-7, .col-sm-5, .col-sm-6{
+  padding: 2vw 0vw 2vw 0vw;
+}
 }
