@@ -41,6 +41,23 @@ border-radius: 3px;
 box-shadow: -4px 4px 18px 0px rgba(0,0,0,0.75);
 }
 
+.content{
+    border:1px solid gray;
+}
+.table{
+    margin: 0px;
+}
+.row{
+    margin: 0px;
+    width: 100vh;
+}
+.col-sm-12{
+    padding: 0px;
+}
+.form-control{
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
 /*  
 
 
@@ -48,6 +65,12 @@ NAVBAR
 
 
 */
+
+div#example_wrapper{
+    width: max;
+    margin: 0 !important;
+}
+
 
 .menu, .content{
     width: 70vw;
@@ -67,9 +90,7 @@ NAVBAR
     color: white;
 }
 /* --------------------- */
-.content{
-    border:1px solid gray;
-}
+
 
 
 

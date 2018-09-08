@@ -7,14 +7,13 @@
         <form method="post" action="">
             <div class="form-group">
                 <label for="exampleInputEmail1">Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Podaj e-mail" id="email">
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Podaj e-mail" id="email">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Hasło</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Hasło" id="password">
+                <input type="password" name="password"  class="form-control" id="exampleInputPassword1" placeholder="Hasło" id="password">
             </div>
-            <button type="submit" class="btn btn-primary">Zaloguj</button>
+            <button type="submit" name="submit" value="send" class="btn btn-primary">Zaloguj</button>
         </form>
-            <a href="http://localhost/soap_front/?page=data" class="link"><button type="submit" class="btn btn-primary">Zaloguj</button></a>
     </div>
 </div>
