@@ -11389,7 +11389,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sNext": "Next",
+				"sNext": "Następna",
 	
 	
 				/**
@@ -11412,7 +11412,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sPrevious": "Previous"
+				"sPrevious": "Poprzednia"
 			},
 	
 			/**
@@ -11467,7 +11467,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfo": "Pokazuje _START_ do _END_ z _TOTAL_ entries",
+			"sInfo": "Pokazuje _START_ do _END_ z _TOTAL_ elementów",
 	
 	
 			/**
@@ -11628,7 +11628,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sLengthMenu": "Show _MENU_ entries",
+			"sLengthMenu": "Wyświetlaj po  _MENU_ elementów",
 	
 	
 			/**
@@ -11708,7 +11708,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sSearch": "Search:",
+			"sSearch": "Szukaj :",
 	
 	
 			/**

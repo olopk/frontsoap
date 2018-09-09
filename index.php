@@ -31,7 +31,7 @@ session_start();
                  $_SESSION['logged'] = true;
             }  
          }
-        if($_SESSION['logged'] == false){
+        if(!isset($_SESSION['logged']) || $_SESSION['logged'] == false){
             include_once('login.php');            
         }
         else if(!isset($_GET['page'])){

@@ -20,7 +20,7 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2vw;
+    margin: 2vw 0vw 2vw 0vw; 
 }
 
 #logo{
@@ -47,35 +47,66 @@ box-shadow: -4px 4px 18px 0px rgba(0,0,0,0.75);
 
 .content{
     border:1px solid gray;
-
-/* Table elements manipulation */    
 }
+/* Table elements manipulation */    
+
+
+
 .table{
     margin: 0px;
 }
+
 .row{
     margin: 0px;
 }
 .col-sm-12{
     padding: 0px;
 }
-.col-sm-6{
-    padding: 1vw 0vw 1vw 0vw;
-}
 
 .dataTables_length label, .dataTables_filter label, .pagination, .dataTables_info{
     padding: 0vw 1vw 0vw 1vw;
 }
-
-.pagination>.active>a, .pagination>.active>a:selected{
-    background-color: #57606f;
+.pagination .paginate_button a{
+    color: #333;
 }
-.pagination>.active>a:hover{
+
+.pagination .paginate_button a:hover{
+    background-color: #e1e5ec;
+    color: #333;
+}
+.pagination .active a{
     background-color: #797f88;
+    border-color: #797f88;
 }
 
 .col-sm-7, .col-sm-5, .col-sm-6{
     padding: 1vw 0vw 1vw 0vw;
+}
+
+tr.odd th, tr.even th{
+    width: 5%
+}
+tr.odd td:nth-child(2), tr.even td:nth-child(2){
+    width: 45%
+}
+
+thead tr th{
+    border-top: 1px solid #dcdfe4 !important;
+    border-right: 1px solid #dcdfe4 !important;
+    border-bottom: 1px solid #dcdfe4 !important;
+}
+
+tbody tr td, tbody tr th{
+    border-bottom: 1px solid #dcdfe4 !important;
+    border-right: 1px solid #dcdfe4 !important;
+}
+
+ul.pagination li a:hover{
+    background-color: #dcdfe4;
+}
+
+ul.pagination li:nth-child(1) a{
+  
 }
 
 /**************************/
@@ -87,7 +118,7 @@ box-shadow: -4px 4px 18px 0px rgba(0,0,0,0.75);
     padding-top: 3vh;
     margin-left: auto;
     margin-right: auto;
-
+    font-size: 1.2vw;
 }
 .nav-pills{
     margin-left: auto;
@@ -178,4 +209,9 @@ td:nth-of-type(4):before { content: "Zmiana"; }
 .col-sm-7, .col-sm-5, .col-sm-6{
   padding: 2vw 0vw 2vw 0vw;
 }
+
+.nav{
+    font-size: 4vw;
+}
+
 }
