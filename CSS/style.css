@@ -8,7 +8,6 @@ h2{
     font-size: 2vw;
 }
 .loginContainer{
-
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -20,95 +19,77 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2vw 0vw 2vw 0vw; 
+    margin: 1vw 0vw 1vw 0vw; 
 }
-
 #logo{
     text-align: center;
     font-family: 'Gamja Flower', cursive;
     margin-bottom: 2vw;
 }
-
+#logo h1, #logo h2{
+    margin: 0px;
+}
 #login{
 width: 50vw;
-margin-left: auto;
-margin-right: auto;
 padding: 1vw;
+margin-bottom: 20vw;
 border: 1px solid gray;
 border-radius: 3px;
 -webkit-box-shadow: -4px 4px 18px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: -4px 4px 18px 0px rgba(0,0,0,0.75);
 box-shadow: -4px 4px 18px 0px rgba(0,0,0,0.75);
 }
-
 .menu, .content{
-    width: 70vw;
-}
-
-.settings{
-    margin-top: 3vw;
-    margin-bottom: 3vw;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
+    width: 90vw;
 }
 .content{
-    border:1px solid gray;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border :1px solid gray;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
-
-
 /* Table elements manipulation */    
 
-
-
-.table{
-    margin: 0px;
-}
-
-.row{
+.table, .row{
     margin: 0px;
 }
 .col-sm-12{
     padding: 0px;
 }
-
 .dataTables_length label, .dataTables_filter label, .pagination, .dataTables_info{
     padding: 0vw 1vw 0vw 1vw;
 }
 .pagination .paginate_button a{
     color: #333;
 }
-
-
 .col-sm-7, .col-sm-5, .col-sm-6{
-    padding: 1vw 0vw 1vw 0vw;
+    padding: 1vh 0vh 1vh 1vh;
 }
-
 tr.odd th, tr.even th{
     width: 5%
 }
 tr.odd td:nth-child(2), tr.even td:nth-child(2){
     width: 45%
 }
-
 thead tr th{
     border-top: 1px solid #dcdfe4 !important;
     border-right: 1px solid #dcdfe4 !important;
     border-bottom: 1px solid #dcdfe4 !important;
 }
-
 tbody tr td, tbody tr th{
     border-bottom: 1px solid #dcdfe4 !important;
     border-right: 1px solid #dcdfe4 !important;
 }
-
-
-
 /**************************/
 /*NAVBAR*/
 .nav{
     background-color: #337ab7;
-    border-radius: 2px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     padding-bottom: 3vh;
     padding-top: 3vh;
     margin-left: auto;
@@ -120,29 +101,19 @@ tbody tr td, tbody tr th{
     margin-right: auto;
     text-align: center;
 }
-.nav-pills > li.active > a{
-    background-color: transparent;
-    color: white;
-}
-.nav-pills > li.active > a:hover{
-    background-color: transparent;
-    color: white;
-}
-.nav-pills > li > a{
-    color: #bcbcbc;
-}
-.nav-pills > li > a:hover{
-    background-color: transparent;
-    color: white;
-}
 .nav > li{
     float:none;
     display:inline-block;
 }
+.nav-pills > li > a{
+    color: #bcbcbc;
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover,.nav-pills > li > a:hover{
+    background-color: transparent;
+    color: white;
+}
 /**************************/
-
 /* for small screens */
-
 @media 
 only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
@@ -150,27 +121,42 @@ only screen and (max-width: 760px),
 .restContainer{
     margin: 0px;
 }
-
 .menu, .content{
 width: 100vw;
 border: none;
 }
-
+h1{
+    font-size: 10vw;
+}
+h2{
+    font-size: 5vw;
+}
+#login{
+    width: 80vw;
+    padding: 1vw;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    padding-bottom: 30vw;
+}
+.content{
+min-height: 60vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
 table, thead, tbody, th, td, tr { 
 display: block; 
 }
-
-
 /* Hide table headers (but not display: none;, for accessibility) */
 thead tr, tr th { 
 position: absolute;
 top: -9999px;
 left: -9999px;
 }
-
 tr { border: 1px solid #ccc; }
-
-
 
 table tr td { 
 /* Behave  like a "row" */
@@ -179,7 +165,6 @@ border-bottom: 1px solid #eee;
 position: relative;
 padding: 0vw 0vw 0vw 23vw !important; 
 }
-
 td:before { 
 border-right: 1px solid #ccc;
 position: absolute;
@@ -191,7 +176,6 @@ width: 18vw;
 padding-right: 10px; 
 white-space: nowrap;
 }
-
 /*
 Label the data
 */
@@ -200,15 +184,12 @@ td:nth-of-type(2):before { content: "NIP"; }
 td:nth-of-type(3):before { content: "Status"; }
 td:nth-of-type(4):before { content: "Zmiana"; }
 
-
 .col-sm-7, .col-sm-5, .col-sm-6{
-  padding: 2vw 0vw 2vw 0vw;
+  padding: 1vw 0vw 1vw 0vw;
 }
-
 .nav{
     font-size: 4vw;
 }
-
 tr.odd th, tr.even th{
     box-sizing: border-box;
 }
@@ -216,7 +197,4 @@ tr.odd td:nth-child(2), tr.even td:nth-child(2){
     box-sizing: border-box;
     width: 100%;
 }
-
-
-
 }

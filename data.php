@@ -17,7 +17,7 @@
         <table id="example" class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">Lp</th>
                     <th scope="col">Nazwa</th>
                     <th scope="col">NIP</th>
                     <th scope="col">Status</th>
@@ -169,7 +169,7 @@
         </table>
     </div>
 </div>
-<script>`
+<script>
     $(document).ready(function() {
         $('#example').DataTable();
 
