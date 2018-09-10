@@ -45,11 +45,17 @@ box-shadow: -4px 4px 18px 0px rgba(0,0,0,0.75);
     width: 70vw;
 }
 
+.flet{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+
+}
 .settings{
-    margin-top: 3vw;
-    margin-bottom: 3vw;
-    margin-left: auto;
-    margin-right: auto;
+    display: inline-block;
     width: 40%;
 }
 .content{
@@ -113,7 +119,7 @@ tbody tr td, tbody tr th{
     padding-top: 3vh;
     margin-left: auto;
     margin-right: auto;
-    font-size: 1.2vw;
+    font-size: 1.3vw;
 }
 .nav-pills{
     margin-left: auto;
@@ -170,8 +176,6 @@ left: -9999px;
 
 tr { border: 1px solid #ccc; }
 
-
-
 table tr td { 
 /* Behave  like a "row" */
 border: none;
@@ -206,7 +210,7 @@ td:nth-of-type(4):before { content: "Zmiana"; }
 }
 
 .nav{
-    font-size: 4vw;
+    font-size: 3vh;
 }
 
 tr.odd th, tr.even th{
@@ -217,6 +221,12 @@ tr.odd td:nth-child(2), tr.even td:nth-child(2){
     width: 100%;
 }
 
-
+.settings{
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
 
 }

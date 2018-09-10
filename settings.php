@@ -8,7 +8,7 @@
             </ul>
         </nav> 
     </div>
-    <div class="content">
+    <div class="content flet">
         <div class="settings">
             <form action="" method="post">
                 <div class="form-group">
