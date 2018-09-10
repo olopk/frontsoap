@@ -9,6 +9,18 @@
         </nav> 
     </div>
     <div class="content">
-       
+        <div class="settings">
+            <form action="" method="post">
+                <div class="form-group">
+                    <label for="refreshTime">Czas odświeżania wyników w godzinach</label>
+                    <input id="refreshTime" name="refreshTime" class="form-control" placeholder="Czas odświeżania">
+                </div>
+                <div class="form-group">
+                    <label for="smth">Jakieś tam dodatkowe ustawienie</label>
+                    <input id="smth" name="SMTH" class="form-control" placeholder="Dodatkowe ustawienie">
+                </div>
+                <button type="submit" class="btn btn-primary">Zapisz</button>
+            </form>
+        </div>     
     </div>
 </div>    

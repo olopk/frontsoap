@@ -45,9 +45,18 @@ box-shadow: -4px 4px 18px 0px rgba(0,0,0,0.75);
     width: 70vw;
 }
 
+.settings{
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
 .content{
     border:1px solid gray;
 }
+
+
 /* Table elements manipulation */    
 
 
@@ -70,14 +79,6 @@ box-shadow: -4px 4px 18px 0px rgba(0,0,0,0.75);
     color: #333;
 }
 
-.pagination .paginate_button a:hover{
-    background-color: #e1e5ec;
-    color: #333;
-}
-.pagination .active a{
-    background-color: #797f88;
-    border-color: #797f88;
-}
 
 .col-sm-7, .col-sm-5, .col-sm-6{
     padding: 1vw 0vw 1vw 0vw;
@@ -101,18 +102,12 @@ tbody tr td, tbody tr th{
     border-right: 1px solid #dcdfe4 !important;
 }
 
-ul.pagination li a:hover{
-    background-color: #dcdfe4;
-}
 
-ul.pagination li:nth-child(1) a{
-  
-}
 
 /**************************/
 /*NAVBAR*/
 .nav{
-    background-color: #57606f;
+    background-color: #337ab7;
     border-radius: 2px;
     padding-bottom: 3vh;
     padding-top: 3vh;
@@ -134,7 +129,7 @@ ul.pagination li:nth-child(1) a{
     color: white;
 }
 .nav-pills > li > a{
-    color: gray;
+    color: #bcbcbc;
 }
 .nav-pills > li > a:hover{
     background-color: transparent;
@@ -213,5 +208,15 @@ td:nth-of-type(4):before { content: "Zmiana"; }
 .nav{
     font-size: 4vw;
 }
+
+tr.odd th, tr.even th{
+    box-sizing: border-box;
+}
+tr.odd td:nth-child(2), tr.even td:nth-child(2){
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
 
 }
